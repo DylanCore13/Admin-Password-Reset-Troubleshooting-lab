@@ -24,12 +24,19 @@
 - If its status is "Deallocated," click on the VM name, then click the "Start" button at the top. Wait for it to start ("Running").
 - Connect via RDP using your AzureAdmin credentials.
 
+  ![image](https://github.com/user-attachments/assets/d8144754-7bb6-48d0-8b81-2d54c0e43ca7)
+
+
 <h3>Create a New Local Admin Account (the one you'll "forget"):</h3>
 
 - Inside your VM (via RDP):
   - Right-click on the Start button and select "Computer Management".
   - Navigate to Local Users and Groups > Users.
   - Right-click in the empty space and select "New User...".
+
+![image](https://github.com/user-attachments/assets/4d2286af-d613-41c2-9604-8cad3aeb1058)
+
+
   - User name: ForgottenAdmin (or something descriptive)
   - Password: TestPassword123! (Set a simple password for now, and write it down for a moment).
   - Uncheck: "User must change password at next logon".
@@ -38,6 +45,9 @@
   - Add to Administrators Group:
     - Double-click on ForgottenAdmin (or right-click > "Properties").
     - Go to the "Member Of" tab.
+   
+      ![image](https://github.com/user-attachments/assets/203da9ba-4b47-4355-8e3e-7201955de4f3)
+
     - Click "Add...".
     - Type Administrators and click "Check Names". It should resolve to your local Administrators group. Click "OK", then "OK" again.
 - Log in as ForgottenAdmin once to confirm it works. Log out of AzureAdmin and try logging in as ForgottenAdmin with TestPassword123!. (This confirms the account is set up correctly before you break it). Log out after testing.
