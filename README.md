@@ -62,8 +62,55 @@
 - Click "OK".
 - Log out of AzureAdmin.
 
+  ![image](https://github.com/user-attachments/assets/49f5a3cd-797d-43d7-9bdf-19b5bd47acae)
+
+
 <h3>Attempt to Login (Demonstrate Failure):</h3>
 
 - Try to log in as ForgottenAdmin with the original password (TestPassword123!).
 - Expected Result: It will fail with an "Incorrect password" or "The user name or password is incorrect" message.
 - CRITICAL STEP: Take a screenshot of this failed login attempt. This is your "problem" screenshot.
+
+  ![image](https://github.com/user-attachments/assets/92528a02-62f9-4ec4-9f43-2b5a4a096001)
+
+
+  
+
+<h2>Part 2: Use Azure's Password Reset Feature (Corrected Navigation)</h2>
+
+
+- You should be on your host machine, using your web browser to access the Azure Portal.
+
+<h3>Navigate to your VM in the Azure Portal:</h3>
+
+  - In the Azure Portal search bar at the top, type "Virtual machines" and select it.
+  - Click on your VM (or the name of your Windows VM).
+  - Access the "Reset password" feature:
+
+- In the left-hand menu of your VM's blade, scroll down.
+- You should see a section titled "Support + troubleshooting".
+- Under "Support + troubleshooting", click on "Reset password".
+
+![image](https://github.com/user-attachments/assets/8d276030-5af3-422f-9d72-5fc38223301b)
+
+<h3>Configure the Password Reset:</h3>
+
+- On the "Reset password" blade that appears:
+  - Username: Type ForgottenAdmin (the local user account whose password you want to reset on the VM).
+  - New password: Enter a new, strong password that you will remember and use to log in later (e.g., NewPassword123!@#).
+  - Confirm new password: Re-enter the exact same new password.
+- Take a screenshot of this "Reset password" blade with the username and new password entered, before you click "Update". This is a good "before" screenshot for your documentation.
+
+![image](https://github.com/user-attachments/assets/87162dec-e6a5-4c2b-a41f-46a5fb9e8cf7)
+
+
+<h3>Initiate the Update:</h3>
+
+- Click the blue "Update" button at the bottom of the blade.
+
+<h3>Monitor the Operation:</h3>
+
+- You will see notifications pop up in the top-right corner of the Azure Portal (click the bell icon to view them).
+- It will say "Deploying" or "Updating" and specifically mention the "VMAccessExtension". This is the Azure tool that performs the password reset on the VM.
+- This operation can take a few minutes to complete. Please be patient.
+- Take a screenshot of the notification showing the successful completion of the "VMAccessExtension" deployment or the password reset operation. This serves as your "during/after" screenshot in the Azure Portal.
