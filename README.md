@@ -114,3 +114,30 @@
 - It will say "Deploying" or "Updating" and specifically mention the "VMAccessExtension". This is the Azure tool that performs the password reset on the VM.
 - This operation can take a few minutes to complete. Please be patient.
 - Take a screenshot of the notification showing the successful completion of the "VMAccessExtension" deployment or the password reset operation. This serves as your "during/after" screenshot in the Azure Portal.
+
+
+
+
+
+<h2>Part 3: Verify the Password Reset</h2>
+
+
+<h3>Initiate a NEW RDP Connection from the Azure Portal:</h3>
+
+
+- Log in with the NEW Password for ForgottenAdmin:
+
+  ![image](https://github.com/user-attachments/assets/098b6f19-4d77-4daa-82fc-2615c0ad2cec)
+
+
+- When the Windows Security prompt asks for your credentials:
+  - User name: Type ForgottenAdmin
+  - Password: Enter the NEW strong password you set in the Azure Portal just moments ago (e.g., NewPassword123!@#).
+- Click "OK" or "Connect".
+- Confirm Successful Login
+
+  ![image](https://github.com/user-attachments/assets/5f7dc680-7660-462b-a23c-5310493ede6b)
+
+
+Expected Result: You should now successfully log in to the VM and see the desktop for the ForgottenAdmin user!
+
